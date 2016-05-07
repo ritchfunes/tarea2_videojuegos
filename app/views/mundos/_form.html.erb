@@ -1,0 +1,29 @@
+<%= form_for(@mundo) do |f| %>
+  <% if @mundo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mundo.errors.count, "error") %> prohibited this mundo from being saved:</h2>
+
+      <ul>
+      <% @mundo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pelicula %><br>
+    <%= f.text_field :pelicula %>
+  </div>
+  <div class="field">
+    <%= f.label :series %><br>
+    <%= f.text_field :series %>
+  </div>
+  <div class="field">
+    <%= f.label :videojuegos %><br>
+    <%= f.text_field :videojuegos %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

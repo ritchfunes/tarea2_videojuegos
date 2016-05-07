@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pelicula:</strong>
+  <%= @mundo.pelicula %>
+</p>
+
+<p>
+  <strong>Series:</strong>
+  <%= @mundo.series %>
+</p>
+
+<p>
+  <strong>Videojuegos:</strong>
+  <%= @mundo.videojuegos %>
+</p>
+
+<%= link_to 'Edit', edit_mundo_path(@mundo) %> |
+<%= link_to 'Back', mundos_path %>

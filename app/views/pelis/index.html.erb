@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Pelis</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Peliculas</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pelis.each do |peli| %>
+      <tr>
+        <td><%= peli.Peliculas %></td>
+        <td><%= link_to 'Show', peli %></td>
+        <td><%= link_to 'Edit', edit_peli_path(peli) %></td>
+        <td><%= link_to 'Destroy', peli, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Peli', new_peli_path %>
